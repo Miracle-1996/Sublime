@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+int x, y, z; cin >> x >> y >> z;
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>x-y-z</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>

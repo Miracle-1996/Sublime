@@ -1,0 +1,13 @@
+{
+	"font_face": "Ubuntu mono",
+	"font_size": 14,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"show_errors_inline": false,
+	"update_check": false,
+	"tab_size": 4,
+	"theme": "Default.sublime-theme",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+}

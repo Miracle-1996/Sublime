@@ -1,0 +1,21 @@
+{
+	"encoding":"cp936",
+	"shell_cmd": "g++ -Wall -DMiracle -std=gnu++17 -Wl,--stack=536870912 \"${file}\" -o \"${file_path}/${file_base_name}\"",
+	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+	"working_dir": "${file_path}",
+	"selector": "source.c++",
+	//-finput-charset=UTF-8 -fexec-charset=UTF-8
+	"variants":
+	[
+		{
+			"name": "Run",
+			"encoding":"cp936",
+			"shell_cmd": "g++ -Wall -DMiracle -std=gnu++17 -Wl,--stack=536870912 \"${file}\" -o \"${file_path}/${file_base_name}\" && \"${file_path}/${file_base_name}\""
+		},
+		{
+			"name": "Cmd",
+			"shell_cmd": "g++ -Wall -DMiracle -std=gnu++17 -Wl,--stack=536870912 \"${file}\" -o \"${file_path}/${file_base_name}\" && start cmd /c \"\"${file_path}/${file_base_name}\" & pause\"",
+			//"encoding":"UTF-8"
+		}
+	]
+}

@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+ll searcher(ll l, ll r, ll x)
+{
+    while (l < r) {
+        ll mid = l + (r - l) / 2;
+        (cal(mid) >= x) ? r = mid : l = mid + 1;
+    }
+    return r;
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>search</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>

@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+int cmp(ld x, ld y)
+{
+	const ld eps = 1e-6;
+	return (fabs(x - y) <= eps) ? 0 : (x < y) ? -1 : 1;
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>cmp</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>

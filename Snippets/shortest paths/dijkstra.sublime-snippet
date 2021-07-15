@@ -1,0 +1,28 @@
+<snippet>
+	<content><![CDATA[
+ll dijkstra(int st, int ed)
+{
+	const ll inf = 0x3f3f3f3f3f3f3f3f;
+	memset(in, false, sizeof(in));
+	memset(d, 0x3f, sizeof(d));
+	priority_queue<pli, vector<pli>, greater<pli>> q; 
+	q.push({0, st}); d[st] = 0;
+	while (q.size()) {
+		int x = q.top().second; q.pop();
+		if (in[x]) continue;
+		in[x] = true;
+		for (int k = head[x]; k; k = nxt[k]) {
+			int y = ver[k], z = edge[k];
+			if (d[x] + z >= d[y]) continue;
+			d[y] = d[x] + z; q.push({d[y], y});
+		}
+	}
+	return (d[ed] == inf) ? -1 : d[ed];
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>dijkstra</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>

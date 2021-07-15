@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+int resolve(int x, int base = 10)
+{
+    int res = 0;
+    while (x) { 
+    	res += x % base; x /= base; 
+    }
+    return res;
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>resolve</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>

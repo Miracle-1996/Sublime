@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+void divide(int x)
+{
+    for (int k = 2; k <= x / k; ++k) {
+        if (x % k) continue;
+        int cnt = 0;
+        while (0 == x % k) { x /= k; ++cnt; }
+    }
+    if (x > 1)
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>divide</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>

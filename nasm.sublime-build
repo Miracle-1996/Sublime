@@ -1,0 +1,7 @@
+{
+	"encoding":"GBK",
+	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+	"cmd": "nasm \"${file_base_name}.asm\" -f bin -o \"${file_base_name}.bin\" -l \"${file_base_name}.lst\"",
+	"working_dir": "${file_path}",
+	"selector": "source.asm",
+}

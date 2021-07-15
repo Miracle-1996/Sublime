@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+bool isPrime(int val)
+{
+    for (int k = 2; k <= val / k; ++k) {
+        if (0 == val % k) return false;
+    }
+    return (val < 2) ? false : true;
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>isPrime</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>

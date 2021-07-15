@@ -1,0 +1,43 @@
+<snippet>
+	<content><![CDATA[
+int lg2[N], f[N][lgN], dep[N], dist[N];
+int ver[M], nxt[M], head[N], idx;
+
+void bfs(int u)
+{
+    memset(f, 0, sizeof(f)); 
+    memset(dep, 0, sizeof(dep));
+    queue<int> q; q.push(u); dep[u] = 1;
+    while (q.size()) {
+        int x = q.front(); q.pop();
+        for (int k = head[x]; k; k = nxt[k]) {
+            int y = ver[k];
+            if (dep[y]) continue; 
+            dep[y] = dep[x] + 1;
+            dist[y] = dist[x] + 1;
+            f[y][0] = x; 
+            for (int i = 1; i <= lg2[n]; ++i) f[y][i] = f[f[y][i - 1]][i - 1]; 
+            q.push(y);
+        }
+    }
+}
+
+int lca(int x, int y)
+{
+    if (dep[x] < dep[y]) swap(x, y);
+    for (int k = lg2[n]; k >= 0; --k) {
+        if (dep[f[x][k]] >= dep[y]) x = f[x][k];
+    }
+    if (x == y) return y;
+    for (int k = lg2[n]; k >= 0; --k) {
+        if (f[x][k] != f[y][k]) { x = f[x][k]; y = f[y][k]; }
+    }
+    return f[x][0];
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>lca</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>

@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+int ksm(int a, int b, int p = INT_MAX)
+{
+    int res = 1 % p;
+    while (b) {
+        if (b & 1) res = (ll)res * a % p;
+        a = (ll)a * a % p; b >>= 1;
+    }
+    return res;
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ksm</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>

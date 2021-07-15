@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+void rmq(void)
+{
+    memset(s, 0, sizeof(s));
+    memset(lg2, 0, sizeof(lg2));
+    lg2[1] = 0;
+    for (int k = 2; k <= n; ++k) lg2[k] = lg2[k >> 1] + 1;
+    for (int k = 1; k <= n; ++k) s[k][0] = a[k];
+    for (int i = 1; i < logN; ++i) {
+        for (int k = 1; k + (1 << i) - 1 <= n; ++k) {
+            s[k][i] = max(s[k][i - 1], s[k + (1 << i - 1)][i - 1]);
+        }
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>rmq</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>
