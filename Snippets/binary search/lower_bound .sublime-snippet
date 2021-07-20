@@ -1,17 +1,17 @@
 <snippet>
 	<content><![CDATA[
-ll searcher(ll l, ll r, ll x)
+template <class tp> tp lower(tp l, tp r, const tp x)
 {
-    while (l < r) {
-        ll mid = l + (r - l) / 2;
-        (cal(mid) >= x) ? r = mid : l = mid;
-    }
-    return r;
+	while (l + 1 < r) {
+		tp mid = l + (r - l) / 2;
+		(cal(mid) >= x) ? r = mid : l = mid;
+	}
+	return r;
 }
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>search</tabTrigger> -->
+	<tabTrigger>lower</tabTrigger> -->
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.c++</scope> -->
 </snippet>
