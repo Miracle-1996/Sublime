@@ -40,19 +40,6 @@ signed main(int argc, char** argv)
     #endif
 	return 0;	
 }
-// type: 
-
-/* tips */
-/*
-*/
-
-/* editorial */
-/*
-*/
-
-/* question */
-/*
-*/
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>while</tabTrigger> -->
