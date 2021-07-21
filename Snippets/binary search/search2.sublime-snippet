@@ -1,9 +1,9 @@
 <snippet>
 	<content><![CDATA[
-template <class tp> tp search2(tp l, tp r, const tp x)
+template <class T> T search2(T l, T r, const T x)
 {
 	while (l < r) {
-		tp mid = l + (r - l + 1) / 2;
+		T mid = l + (r - l + 1) / 2;
 		(cal(mid) <= x) ? l = mid : r = mid - 1;
 	}
 	return l;
