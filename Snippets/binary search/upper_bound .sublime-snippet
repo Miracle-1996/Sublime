@@ -1,9 +1,9 @@
 <snippet>
 	<content><![CDATA[
-template <class tp> tp upper(tp l, tp r, const tp x)
+template <class T> T upper(T l, T r, const T x)
 {
 	while (l + 1 < r) {
-		tp mid = l + (r - l) / 2;
+		T mid = l + (r - l) / 2;
 		(cal(mid) <= x) ? l = mid : r = mid;
 	}
 	return l;
