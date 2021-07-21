@@ -36,20 +36,7 @@ signed main(int argc, char** argv)
         cout << end_clock - start_clock << "ms" << endl;
     #endif
 	return 0;	
-} 
-// type: 
-
-/* tips */
-/*
-*/
-
-/* editorial */
-/*
-*/
-
-/* question */
-/*
-*/
+}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>template</tabTrigger> -->
