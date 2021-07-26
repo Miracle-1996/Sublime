@@ -1,10 +1,10 @@
 <snippet>
 	<content><![CDATA[
-template <class T> T lower(T l, T r, const T x)
+template <class T> T lower(T l, T r)
 {
 	while (l + 1 < r) {
 		T mid = l + (r - l) / 2;
-		(cal(mid) >= x) ? r = mid : l = mid;
+		(cal(mid)) ? r = mid : l = mid;
 	}
 	return r;
 }
