@@ -30,6 +30,7 @@ signed main(int argc, char** argv)
 		freopen("input.txt", "r", stdin);
 	//	freopen("output.txt", "w", stdout);
 	#endif
+	cout << fixed << setprecision(20);
 	std::ios::sync_with_stdio(false); cin.tie(nullptr);
 	while (cin >> n >> m) {
 		
